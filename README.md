@@ -4,7 +4,7 @@ JavaSE的一些学习总结
 
 >[JavaSE总结2(多线程)](https://github.com/luotf/JavaSE_Learning/blob/master/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%932(%E5%A4%9A%E7%BA%BF%E7%A8%8B).md)
 
->[JavaSE总结3(集合框架)](https://github.com/luotf/JavaSE_Learning/blob/master/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%932(%E5%A4%9A%E7%BA%BF%E7%A8%8B).md)
+>[JavaSE总结3(集合框架)](https://github.com/luotf/JavaSE_Learning/blob/master/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%933(%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6).md)
 
 >[JavaSE总结4(IO)](https://github.com/luotf/JavaSE_Learning/blob/master/Java%E5%9F%BA%E7%A1%80%E6%80%BB%E7%BB%932(%E5%A4%9A%E7%BA%BF%E7%A8%8B).md)
 
