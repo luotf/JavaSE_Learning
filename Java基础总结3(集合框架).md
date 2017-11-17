@@ -8,7 +8,7 @@
              String s = new String();
              s = "hello";
              sop(s);
-     (2)String(byte[] bys):传一个字节数组作为参数 
+     (2)String(byte[] bys)：传一个字节数组作为参数 
          举例：
              byte[] bys = {97,98,99,100,101};
              String s = new String(bys);
@@ -28,16 +28,16 @@
              char[] chs = {'a','b','c','d','e'};
              String s = new String(chs,1,2);
              sop(s);	
-	(6)String(String str):把一个字符串传递过来作为参数
+     (6)String(String str):把一个字符串传递过来作为参数
          举例：
              char[] chs = {'a','b','c','d','e'};
              String ss = new String(s);
              sop(ss);
-		G:直接把字符串常量赋值给字符串引用对象(最常用)
+     (7)直接把字符串常量赋值给字符串引用对象(最常用)
 			举例：
 			  String s = "hello";
 			  sop(s);
-3. 面试题
+2. 面试题
      (1)请问String s = new String("hello");创建了几个对象。
          答：两个。一个"hello"字符串对象，在方法区的常量池；一个s对象，在栈内存。
 
