@@ -3,37 +3,37 @@
 
 ```
 1. 创建字符串对象
-     (1)String():无参构造
+     (1)String()：无参构造。
          举例：
              String s = new String();
              s = "hello";
              sop(s);
-     (2)String(byte[] bys)：传一个字节数组作为参数 
+     (2)String(byte[] bys)：传一个字节数组作为参数。
          举例：
              byte[] bys = {97,98,99,100,101};
              String s = new String(bys);
              sop(s);
-     (3)String(byte[] bys,int index,int length):把字节数组的一部分转换成一个字符串 
+     (3)String(byte[] bys,int index,int length)：把字节数组的一部分转换成一个字符串。 
          举例：
              byte[] bys = {97,98,99,100,101};
              String s = new String(bys,1,2);
              sop(s);
-     (4)String(char[] chs):传一个字符数组作为参数
+     (4)String(char[] chs)：传一个字符数组作为参数。
          举例：
              char[] chs = {'a','b','c','d','e'};
              String s = new String(chs);
              sop(s);
-     (5)String(char[] chs,int index,int length):把字符数组的一部分转换成一个字符串
+     (5)String(char[] chs,int index,int length)：把字符数组的一部分转换成一个字符串。
          举例：
              char[] chs = {'a','b','c','d','e'};
              String s = new String(chs,1,2);
              sop(s);	
-     (6)String(String str):把一个字符串传递过来作为参数
+     (6)String(String str)：把一个字符串传递过来作为参数。
          举例：
              char[] chs = {'a','b','c','d','e'};
              String ss = new String(s);
              sop(ss);
-     (7)直接把字符串常量赋值给字符串引用对象(最常用)
+     (7)直接把字符串常量赋值给字符串引用对象。(最常用)
 			举例：
 			  String s = "hello";
 			  sop(s);
@@ -52,46 +52,46 @@
 		 sop(s3==s4);  //true
 		 
      (3)字符串对象一旦被创建就不能被改变。
-		 指的是字符串常量值不改变。
+         指的是字符串常量值不改变。
 4. 字符串中各种功能的方法
      (1)判断
-         boolean equals(Object anObject):判断两个字符串的内容是否相同，复写了Object的方
-         boolean equalsIgnoreCase(String anotherString):判断两个字符串的内容是否相同，不区分大小写
-         boolean contains(String s):判断一个字符串中是否包含另一个字符串
-		注意：判断字符串是否包含特殊字符.直接表示为str.contains(".")
-         boolean endsWith(String suffix):测试此字符串是否以指定的后缀结束
-         boolean startsWith(String suffix):测试此字符串是否以指定的前缀开始
-         boolean isEmpty():测试字符串是否为空
+         boolean equals(Object anObject)：判断两个字符串的内容是否相同，复写了Object的方法。
+         boolean equalsIgnoreCase(String anotherString)：判断两个字符串的内容是否相同，不区分大小写。
+         boolean contains(String s)：判断一个字符串中是否包含另一个字符串。
+          注意：判断字符串是否包含特殊字符.直接表示为str.contains(".")。
+         boolean endsWith(String suffix)：测试此字符串是否以指定的后缀结束。
+         boolean startsWith(String suffix)：测试此字符串是否以指定的前缀开始。
+         boolean isEmpty()：测试字符串是否为空。
      (2)获取
-         int length():返回此字符串的长度
-         char charAt(int index):返回指定索引处的 char值
-         int indexOf(int ch):返回指定字符在此字符串中第一次出现处的索引。
-         int indexOf(int ch, int fromIndex):返回在此字符串中第一次出现指定字符处的索引， 从指定的索引开始搜索。 
-         int indexOf(String str):返回指定子字符串在此字符串中第一次出现处的索引。 
-         int indexOf(String str, int fromIndex):返回指定子字符串在此字符串中第一次出现处的索引，从指定的索引开始。 
+         int length()：返回此字符串的长度。
+         char charAt(int index)：返回指定索引处的 char值。
+         int indexOf(int ch)：返回指定字符在此字符串中第一次出现处的索引。
+         int indexOf(int ch, int fromIndex)：返回在此字符串中第一次出现指定字符处的索引，从指定的索引开始搜索。 
+         int indexOf(String str)：返回指定子字符串在此字符串中第一次出现处的索引。 
+         int indexOf(String str, int fromIndex)：返回指定子字符串在此字符串中第一次出现处的索引，从指定的索引开始。 
          int lastIndexOf(int ch)：返回指定字符在此字符串中最后一次出现处的索引。 
          int lastIndexOf(int ch, int fromIndex)：返回指定字符在此字符串中最后一次出现处的索引,从指定的索引处开始进行反向搜索。 
          int lastIndexOf(String str)：返回指定子字符串在此字符串中最右边出现处的索引。 
          int lastIndexOf(String str, int fromIndex)：返回指定子字符串在此字符串中最后一次出现处的索引，从指定的索引开始反向搜索。 
-         String substring(int beginIndex) (注意：该方法substring的String是小写！！！)：返回一个新的字符串，它是此字符串的一个子字符串。 
-         String substring(int beginIndex, int endIndex) (注意该方法的String是小写！！！)：返回一个新字符串，它是此字符串的一个子字符串,包含头不包含尾。 
+         String substring(int beginIndex) (注意：该方法substring的String是小写！)：返回一个新的字符串，它是此字符串的一个子字符串。 
+         String substring(int beginIndex, int endIndex) (注意该方法的String是小写！)：返回一个新字符串，它是此字符串的一个子字符串,包含头不包含尾。 
      (3)转换
-         byte[] getBytes()：(很常用！)从字符串到字节数组的方法
-         void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin) :将字符从此字符串复制到目标字符数组。
-         char[] toCharArray()：(很常用！)从字符串到字符数组的方法
-         static String copyValueOf(char[] data) :返回指定数组中表示该字符序列的 String。 
-         static String copyValueOf(char[] data, int offset, int count) ：返回指定数组中表示该字符序列的 String。
+         byte[] getBytes()：(很常用！)从字符串到字节数组的方法。
+         void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)：将字符从此字符串复制到目标字符数组。
+         char[] toCharArray()：(很常用！)从字符串到字符数组的方法。
+         static String copyValueOf(char[] data)：返回指定数组中表示该字符序列的 String。 
+         static String copyValueOf(char[] data, int offset, int count)：返回指定数组中表示该字符序列的 String。
          static String valueOf(数据类型):把该数据类型的数据转换成字符串。
-         String toLowerCase()：把字符串转换成小写
-         String toUpperCase()：把字符串转换成大写
-         String concat(String str):将指定字符串连接到此字符串的结尾。
+         String toLowerCase()：把字符串转换成小写。
+         String toUpperCase()：把字符串转换成大写。
+         String concat(String str)：将指定字符串连接到此字符串的结尾。
      (4)替换
-         String replace(char oldChar, char newChar):用新字符替换旧字符(替换所有)
-         String replace(String target, String replacement):用新的子串换旧串
+         String replace(char oldChar, char newChar)：用新字符替换旧字符(替换所有)。
+         String replace(String target, String replacement)：用新的子串换旧串。
      (5)分割
-         String[] split(String regex)：根据指定的字符串把一个字符串分割成一个字符串数组
+         String[] split(String regex)：根据指定的字符串把一个字符串分割成一个字符串数组。
      (6)去空格	
-         String trim():去除字符串的前后空格
+         String trim()：去除字符串的前后空格。
      (7)比较
          int compareTo(String anotherString)：按字典顺序比较两个字符串。 
          int compareToIgnoreCase(String str)：按字典顺序比较两个字符串，不考虑大小写。 
@@ -103,37 +103,37 @@
 ```
 1. 字符串的缓冲区，是一个容器。
 2. 它和String的区别
-		它是缓冲区可变长度的。
+     它是缓冲区可变长度的。
 3. 构造方法
-		StringBuffer() 构造一个其中不带字符的字符串缓冲区，初始容量为 16 个字符。
-		StringBuffer(int num) 构造一个不带字符，但具有指定初始容量的字符串缓冲区。
-		StringBuffer(String str) 构造一个字符串缓冲区，并将其内容初始化为指定的字符串内容。
+     StringBuffer()：构造一个其中不带字符的字符串缓冲区，初始容量为 16 个字符。
+     StringBuffer(int num)：构造一个不带字符，但具有指定初始容量的字符串缓冲区。
+     StringBuffer(String str)：构造一个字符串缓冲区，并将其内容初始化为指定的字符串内容。
 4. 常用方法
      (1)增加数据
-         append：添加各种类型的数据。
-         insert：在容器指定位置插入各种类型的数据。
+         append()：添加各种类型的数据。
+         insert()：在容器指定位置插入各种类型的数据。
      (2)删除数据
-         deleteCharAt：删除指定位置的字符。
-         delete：还可以用于清空StringBuffer的缓冲区。
+         deleteCharAt()：删除指定位置的字符。
+         delete()：还可以用于清空StringBuffer的缓冲区。
      (3)替换
-         replace
+         replace()
      (4)获取 
-         charAt 
+         charAt() 
      (5)长度和容量
          length()：元素的个数。
-         capacity：元素的理论值。
+         capacity()：元素的理论值。
      (6)获取元素的位置
-         indexOf
-         lastIndexOf
+         indexOf()
+         lastIndexOf()
      (7)截取
          substring(int start)
          substring(int start,int end)
      (8)反转
          reverse
 5. 字符串和StringBuffer的转换
-     (1)String-->StringBuffer通过构造：
+     (1)String-->StringBuffer通过构造
          如：StringBuffer sb = new StringBuffer(String str)
-     (2)StringBuffer--String通过toString方法 
+     (2)StringBuffer--String通过toString()方法 
          如：StringBuffer sb = new StringBuffer();
              sb.toString();
 ```
@@ -164,13 +164,12 @@
      boolean	Boolean
      char		Character
 3. 构造方法
-     static int MAX_VALUE 值为 2^31-1 的常量，它表示 int类型能够表示的最大值。
-     static int MIN_VALUE  值为 -2^31 的常量，它表示 int类型能够表示的最小值。
+     static int MAX_VALUE 值为 2^31-1 的常量，它表示int类型能够表示的最大值。
+     static int MIN_VALUE  值为 -2^31 的常量，它表示int类型能够表示的最小值。
      static Class<Integer> TYPE 表示基本类型int的Class 实例。
      Integer(int value) 构造一个新分配的Integer对象，它表示指定的int值。
      Inreger(String s)
-     注意：s必须是纯数字的字符串。否则会有异常NumberFormatException
-		                        
+     注意：s必须是纯数字的字符串。否则会有异常NumberFormatException。
 4. 几个常用的方法
      Integer.toBinaryString()：以二进制无符号整数形式返回一个整数参数的字符串。
      Integer.toOctalString()：以八进制无符号整数形式返回一个整数参数的字符串。
@@ -267,7 +266,7 @@
               ②线程不同步。
            保证元素唯一性的依据：compareTo()方法return 0。
       注意：
-		  ①HashSet
+          ①HashSet
              为了保证元素的唯一性，我们通常在往HashSet集合里面存储元素时，在定义对象的类中通常复写hashCode和equals方法。
            HashSet是如何保证元素唯一性的呢？
     	     如果两元素的hashCode值不同，则不会调用equals方法。
@@ -316,7 +315,7 @@
 3. Map集合没有迭代器，Map的取出，是将Map转成Set，再使用迭代器取出。Collection取出，使用就是迭代器。
 选择方式：
   1. 如果对象很多，必须使用集合存储。
-  2. 如果元素存在着映射关系，可以优先考虑使用Map存储或者用数组.
+  2. 如果元素存在着映射关系，可以优先考虑使用Map存储或者用数组。
   3. 如果没有映射关系，可以使用Collection存储。
 ```
 
@@ -348,7 +347,7 @@
 1. 迭代器
      (1)迭代器的next方法是自动向下取元素，要避免出现NoSuchElementException。也就是在迭代循环中调用一次next方法一次就要hasNext判断一次。
         比如：语句sop(it.next()+"..."+it.next())会发生上述异常。
-     (2)迭代器的next方法返回值类型是Object，所以要记得类型转换,应用泛型后就不用强转
+     (2)迭代器的next方法返回值类型是Object，所以要记得类型转换,应用泛型后就不用强转。
 2. List集合
      (1)List集合元素带角标，所以元素有序。
      (2)List集合可以含重复元素，也可以含null。  
@@ -358,12 +357,12 @@
      (1)Set接口里元素是唯一的，可以包含null。
      (2)Set集合只有一种取出方式，就是迭代器Iterator。
      (3)HashSet
-		①数据结构：哈希表。元素是无序的，唯一的。
-		②线程不同步。
+        ①数据结构：哈希表。元素是无序的，唯一的。
+        ②线程不同步。
      (4)TreeSet
-		①数据结构：二叉树。元素是有序的，唯一的。
-		②线程不同步。
-		③TreeSet集合要求往集合里存放的元素自身具备比较性，否则会报错。
+        ①数据结构：二叉树。元素是有序的，唯一的。
+        ②线程不同步。
+        ③TreeSet集合要求往集合里存放的元素自身具备比较性，否则会报错。
 4. Map集合
      (1)Hashtable
          哈希表结构，线程安全的，键和值不能为null。
@@ -392,10 +391,10 @@ E. Hashtable
 
 ```
 1. 为什么会出现泛型？
-    (1)因为集合存放的数据类型不固定，故往集合里面存放元素时，存在安全隐患。
-    (如果在定义集合时，可以想定义数组一样指定数据类型，那么就可以解决该类安全问题)
-	(2)JDK1.5后出现了泛型，用于解决集合框架的安全问题。
-	(3)泛型是一个类型安全机制。
+     (1)因为集合存放的数据类型不固定，故往集合里面存放元素时，存在安全隐患。
+     (如果在定义集合时，可以想定义数组一样指定数据类型，那么就可以解决该类安全问题)
+     (2)JDK1.5后出现了泛型，用于解决集合框架的安全问题。
+     (3)泛型是一个类型安全机制。
 2. 泛型定义格式
      通过<>来定义要操作的引用数据类型。
       比如：ArrayList<String> al = new ArrayList<String>;
@@ -423,7 +422,7 @@ E. Hashtable
 ## 14. 高级for循环
 
 ```
-1. 高级for循环，只用于集合和数组的遍历，集合只能用Collection不能用Map集合
+1. 高级for循环，只用于集合和数组的遍历，集合只能用Collection不能用Map集合。
    只有把Map集合转化成Set集合，才能用for循环。
 2. 格式
      for(数据类型 变量名:被遍历的集合(Collection)或者数组){
@@ -495,9 +494,9 @@ import static java.util.Arrays.* ：导入的是Arrays这个类中所有的静�
 ```
 1. 数组变集合
      方法：static <T> List<T> asList(T... a)：返回一个受指定数组支持的固定大小的列表。
-     好处：可以使用集合的思想和方法操作数组中的元素，数组是一个对象，但是数组中的功能很少
+     好处：可以使用集合的思想和方法操作数组中的元素，数组是一个对象，但是数组中的功能很少。
 2. 集合变数组
-     方法：Collction中的toArray方法
+     方法：Collction中的toArray方法。
      好处：可以限定对集合元素的操作，防止对集合的元素进行增删，因为数组长度是固定的。
 ```
 
