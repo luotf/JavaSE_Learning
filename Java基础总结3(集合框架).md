@@ -34,9 +34,9 @@
              String ss = new String(s);
              sop(ss);
      (7)直接把字符串常量赋值给字符串引用对象。(最常用)
-			举例：
-			  String s = "hello";
-			  sop(s);
+         举例：
+             String s = "hello";
+             sop(s);
 2. 面试题
      (1)请问String s = new String("hello");创建了几个对象。
          答：两个。一个"hello"字符串对象，在方法区的常量池；一个s对象，在栈内存。
@@ -44,12 +44,12 @@
      (2)请写出下面的结果
          String s1 = new String("abc");
          Strign s2 = new String("abc");
-		 String s3 = "abc";
-		 String s4 = "abc";
+         String s3 = "abc";
+         String s4 = "abc";
 
-		 sop(s1==s2);  //false
-		 sop(s1==s3);  //false
-		 sop(s3==s4);  //true
+         sop(s1==s2);  //false
+         sop(s1==s3);  //false
+         sop(s3==s4);  //true
 		 
      (3)字符串对象一旦被创建就不能被改变。
          指的是字符串常量值不改变。
@@ -155,14 +155,14 @@
      将基本数据类型封装成对象的好处在于可以在对象中定义更多的功能操作该数据。
      常用的操作之一：用于基本数据类型与字符串之间的转换。
 2. 基本数据类型和对象类型的对应
-     byte       Byte
-     short	    Short 
-     int		Integer
-     long		Long
-     float		Float
-     double	    Double
-     boolean	Boolean
-     char		Character
+     byte        Byte
+     short	 Short 
+     int         Integer
+     long        Long
+     float       Float
+     double      Double
+     boolean     Boolean
+     char        Character
 3. 构造方法
      static int MAX_VALUE 值为 2^31-1 的常量，它表示int类型能够表示的最大值。
      static int MIN_VALUE  值为 -2^31 的常量，它表示int类型能够表示的最小值。
